@@ -4,13 +4,13 @@ class Solution:
         stk = []
 
         dict = {
-            '(':')',
-            '{': '}',
-            '[': ']'
+            ')':'(',
+            '}': '{',
+            ']': '['
         }
 
         for item in s:
-            if len(stk)>0 and item in [')', '}', ']'] and dict.get(stk[0], None) == item:
+            if len(stk)>0 and item in [')', '}', ']'] and dict.get(item, None) == stk[0]:
                 stk.pop(0)
                 continue
             else:
