@@ -5,11 +5,9 @@ class MinStack:
         self.mins = []
 
     def push(self, value: int) -> None:
-        self.s.insert(0,value)
-        if self.mins:
-            self.mins.append(min(value, self.mins[-1]))
-        else:
-            self.mins.append(value)
+        self.s.append(value)
+        val = min(value, self.mins[-1] if self.mins else value)
+        self.mins.append(val)
 
     def pop(self) -> None:
         self.s.pop(0)
