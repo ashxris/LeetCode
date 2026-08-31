@@ -20,7 +20,7 @@ class MinStack:
             return self.s[0]
 
     def getMin(self) -> int:
-        return min(self.s)
+        return min(sorted(self.s))
         
 
 
