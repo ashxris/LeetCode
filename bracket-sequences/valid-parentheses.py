@@ -11,7 +11,7 @@ class Solution:
 
         for item in s:
             if len(stk)>0 and item in [')', '}', ']'] and dict.get(stk[0], None) == item:
-                stk.pop()
+                stk.pop(0)
                 continue
             else:
                 stk.insert(0, item)
