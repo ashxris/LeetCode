@@ -10,11 +10,11 @@ class MinStack:
         self.mins.append(val)
 
     def pop(self) -> None:
-        self.s.pop(0)
+        self.s.pop()
         self.mins.pop()
 
     def top(self) -> int:
-        return self.s[0]
+        return self.s[-1]
 
     def getMin(self) -> int:
             return self.mins[-1]
