@@ -4,13 +4,9 @@ class MinStack:
         self.s = []
 
     def push(self, value: int) -> None:
-        if type(value) == int:
             self.s.insert(0,value)
 
     def pop(self) -> None:
-        if len(self.s)==0:
-            raise Exception("Stack is empty.")
-        else:
             self.s.pop(0)
 
     def top(self) -> int:
