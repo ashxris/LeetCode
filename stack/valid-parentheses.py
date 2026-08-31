@@ -1,6 +1,7 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-        self.stk = []
+        
+        stk = []
 
         dict = {
             '(':')',
@@ -9,16 +10,16 @@ class Solution:
         }
 
         for item in s:
-                if (len(stk)>0 and s[item] in list(dict.values) and dict.get(stk[0], None) == s[item]):
-                    stk.pop()
-                    continue
-                else:
-                    stk.insert(0, s[item])
+            if len(stk)>0 and item in [')', '}', ']'] and dict.get(stk[0], None) == item:
+                stk.pop()
+                continue
+            else:
+                stk.insert(0, item)
 
         if len(stk) == 0:
-                return True
-            else: 
-                return False
+            return True
+        else: 
+            return False
 
 
 
