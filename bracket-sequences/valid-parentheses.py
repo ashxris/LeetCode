@@ -3,7 +3,10 @@ class Solution:
         
         stk = []
 
-        dict = {')':'(','}': '{',']': '['}
+        dict = {')':'(',
+                '}': '{',
+                ']': '['
+            }
 
         for item in s:
             if len(stk)>0 and item in [')', '}', ']'] and dict.get(item, None) == stk[0]:
