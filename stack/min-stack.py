@@ -14,9 +14,6 @@ class MinStack:
             self.s.pop(0)
 
     def top(self) -> int:
-        if len(self.s)==0:
-            raise Exception("Stack is empty.")
-        else :
             return self.s[0]
 
     def getMin(self) -> int:
