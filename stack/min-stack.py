@@ -4,7 +4,8 @@ class MinStack:
         self.s = []
 
     def push(self, value: int) -> None:
-        self.s.insert(0,value)
+        if type(value) == int:
+            self.s.insert(0,value)
 
     def pop(self) -> None:
         if len(self.s)==0:
