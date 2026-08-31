@@ -15,11 +15,7 @@ class Solution:
             else:
                 stk.insert(0, item)
 
-        if len(stk) == 0:
-            return True
-        else: 
-            return False
-
+        return len(stk) == 0
 
 
         
