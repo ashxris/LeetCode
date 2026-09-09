@@ -19,4 +19,4 @@ class Solution:
             else:
                 dict2[i]=1
 
-        return dict1 == dict2:
+        return dict1 == dict2
