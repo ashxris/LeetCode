@@ -4,6 +4,9 @@ class Solution:
         dict1 = {}
         dict2 = {}
 
+        if len(s)!= len(t):
+            return False
+
         for i in s:
             if i in dict1:
                 dict1[i]+=1
