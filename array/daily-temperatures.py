@@ -5,8 +5,8 @@ class Solution:
 
         for i in range(len(temperatures)):
             while st and temperatures[i] > temperatures[st[-1]]:
-                idx = st.pop()
-                res[idx] = i - idx
+                j = st.pop()
+                res[j] = i - j
             st.append(i)
         
         return res
